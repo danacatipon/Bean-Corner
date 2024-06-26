@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Bean Corner </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Q4j1X6Y8omCg/HdRw9I8kDi5XlIlmB09MkXuUJdRJ+FUlL5gz8hX6mKmFa3YKikCOTd8jJ6jQjOqNB7VcU6NpQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <script src="script.js"></script>
+    <div id="preloader">
+        <img src="img/coffee cup gif.gif" alt="Loading...">
+    </div>
+<!--Navbar-->
+<header>
+    <div class="nav container">
+        <a href="#" class="logo">BEAN CORNER</a>
+        <div class="navbar">
+            <a href="index.html" class="nav-link">Home</a> 
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="menu.html" class="nav-link">Menu</a>
+            <a href="promo.html" class="nav-link">Promos</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+        </div>
+        <div class="nav-icons">
+            <button id="mode-toggle">
+                <span id="mode-icon">☀️</span>
+            </button>
+            <a href="#" id="cart-icon"><i class="bx bx-shopping-bag"></i></a>
+            <button class="nav-toggle" id="nav-toggle">
+                <i class="bx bx-menu"></i>
+            </button>
+        </div>
+        <!--Cart Sidebar-->
+        <div id="sidebar-cart">
+            <h2>My Cart &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="close-cart"><i class='bx bx-x'></i></button> </h2>
+            <div id="cart-items">
+                <p>No items in the cart.</p>
+            </div>
+            <div class="side-footer">
+                <div id="cart-total">
+                    Total: <span id="total-price">₱0</span>
+                </div>
+                <button id="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    
+        <div id="overlay"></div>
+    
+    </div>
+    </header>
+
+    <!--Menu Section-->
+    <div class="main-menus" id="menu">
+        <h1 class="heading">Menu<span> Coffee and More </span></h1>
+        <div class="menu-container">
+            <ul class="filter-list">
+                <li>
+                    <button class="filter-btn active" data-category="all"> All </button>
+                </li>
+                <li>
+                    <button class="filter-btn" data-category="espresso"> Espresso Based </button>
+                </li>
+                <li>
+                    <button class="filter-btn" data-category="cold"> Cold-Coffee </button>
+                </li>
+                <li>
+                    <button class="filter-btn" data-category="non"> Non-Coffee </button>
+                </li>
+                <li>
+                    <button class="filter-btn" data-category="tea"> Tea </button>
+                </li>
+                <li>
+                    <button class="filter-btn" data-category="signature"> Signature Drinks </button>
+                </li>
+                <li>
+                    <button class="filter-btn" data-category="pastries"> Pastries </button>
+                </li>
+                <li>
+                    <button class="filter-btn" data-category="sandwich"> Sandwich & Meals </button>
+                </li>
+            </ul>
+            <hr class="divider">
+            <!--All-->
+            <ul class="food-menu-list">
+                
+            </ul>
+            <!--Espresso-Based-->
+            <ul class="food-menu-list">
+                <li data-category="espresso" data-name="Americano" data-price="95">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/americano.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Americano </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="95">₱95</data>
+                            <del class="del"> ₱100</del>
+                        </div>
+                    </div>
+                </li>
+
+                <li data-category="espresso" data-name="Espresso" data-price="75">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/espresso.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Espresso </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="75">₱75</data>
+                            <del class="del"> ₱100</del>
+                        </div>
+                    </div>
+                </li>
+                <li data-category="espresso" data-name="Cappuccino" data-price="120">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/cappuccino.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Cappuccino </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="120">₱120</data>
+                            <del class="del"> ₱130</del>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!--Cold Brew Based-->
+            <ul class="food-menu-list">
+                <li data-category="cold" data-name="Iced Coffee" data-price="110">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/iced coffee.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Iced Coffee </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="110"> ₱110 </data>
+                            <del class="del"> ₱130</del>
+                        </div>
+                    </div>
+                </li>
+
+                <li data-category="cold" data-name="Frappuccino" data-price="150">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/frappe.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Frappuccino </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="150">₱150</data>
+                            <del class="del"> ₱160</del>
+                        </div>
+                    </div>
+                </li>
+                <li data-category="cold" data-name="Cold Brew" data-price="120">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/cold brew.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Cold Brew </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="120">₱120</data>
+                            <del class="del"> ₱140</del>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!--Non-Coffee-->
+            <ul class="food-menu-list">
+                <li data-category="non" data-name="Hot Chocolate" data-price="100">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/hot.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category">Hot Chocolate</p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="100"> ₱100 </data>
+                            <del class="del"> ₱110</del>
+                        </div>
+                    </div>
+                </li>
+
+                <li data-category="non" data-name="Lemonade" data-price="90">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/lemon.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Lemonade </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="90">₱90</data>
+                            <del class="del"> ₱110</del>
+                        </div>
+                    </div>
+                </li>
+                <li data-category="non" data-name="Fruit Juice" data-price="100">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/fruit.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Fruit Juice </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="100">₱100</data>
+                            <del class="del"> ₱130</del>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!--Tea-->
+            <ul class="food-menu-list">
+                <li data-category="tea" data-name="Green Tea" data-price="80">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/Green Tea Soda.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Green Tea </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="80"> ₱80 </data>
+                            <del class="del"> ₱100</del>
+                        </div>
+                    </div>
+                </li>
+
+                <li data-category="tea" data-name="Black Tea" data-price="80">
+                    <div class="food-menu-card" >
+                        <div class="card-banner">
+                            <img src="img/black tea.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Black Tea </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="80">₱80</data>
+                            <del class="del"> ₱120</del>
+                        </div>
+                    </div>
+                </li>
+                <li data-category="tea" data-name="Iced Tea" data-price="90">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/iced tea.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category">Iced Tea</p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="90">₱90</data>
+                            <del class="del"> ₱130</del>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!--Signature -->
+            <ul class="food-menu-list">
+                <li data-category="signature" data-name="Ube Latte" data-price="160">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/ube latte.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Ube Latte </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="160"> ₱160</data>
+                            <del class="del"> ₱200</del>
+                        </div>
+                    </div>
+                </li>
+
+                <li data-category="signature" data-name="Pandan Latte" data-price="150">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/Pandan Latte _ Sift & Simmer.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Pandan Latte </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="150">₱150</data>
+                            <del class="del"> ₱190</del>
+                        </div>
+                    </div>
+                </li>
+                <li data-category="signature" data-name="Strawberry Latte" data-price="160">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/Strawberry Latte - Texanerin Baking.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Strawberry Latte </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="160">₱160</data>
+                            <del class="del"> ₱200</del>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!--Pastries-->
+            <ul class="food-menu-list">
+                <li data-category="pastries" data-name="Cake" data-price="150">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/cake.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Cake </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="150"> ₱150 </data>
+                            <del class="del"> ₱180</del>
+                        </div>
+                    </div>
+                </li>
+
+                <li data-category="pastries" data-name="Ensaymada" data-price="60">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/ensaymada.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Ensaymada </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="60">₱60</data>
+                            <del class="del"> ₱100</del>
+                        </div>
+                    </div>
+                </li>
+                <li data-category="pastries" data-name="Muffins" data-price="80">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/muffin.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Muffins </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="80">₱80</data>
+                            <del class="del"> ₱120</del>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!--Sandwich-->
+            <ul class="food-menu-list">
+                <li data-category="sandwich" data-name="Sandwich" data-price="100">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/Club Sandwich.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category">Sandwich</p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="100"> ₱100 </data>
+                            <del class="del"> ₱130</del>
+                        </div>
+                    </div>
+                </li>
+
+                <li data-category="sandwich" data-name="Pasta" data-price="150">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/pasta.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Pasta </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="150">₱150</data>
+                            <del class="del"> ₱180</del>
+                        </div>
+                    </div>
+                </li>
+                <li data-category="sandwich" data-name="Salad" data-price="130">
+                    <div class="food-menu-card">
+                        <div class="card-banner">
+                            <img src="img/salad.jpg" width="300" height="300" loading="lazy" alt="Americano" class="w-100">
+                            <button class="food-menu-btn order-now">Order Now</button>
+                        </div>
+                        <div class="wrapper">
+                            <p class="category"> Salad </p>
+                            <div class="rating-wrapper">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title"> </h3>
+                        <div class="price-wrapper">
+                            <p class="price-text">Price:</p>
+                            <data class="price" value="130">₱130</data>
+                            <del class="del"> ₱200</del>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>

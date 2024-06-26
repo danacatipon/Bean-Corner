@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="transaction-form.css">
+</head>
+<body>
+    <div class="container">
+        <form id="transaction-form">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">Billing Address</h3>
+                    <div class="inputBox">
+                        <span>Contact:</span>
+                        <input type="text" id="buyer-name" placeholder="Full Name" required>
+                        <input type="tel" id="buyer-phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Address:</span>
+                        <input type="text" id="postal-code" placeholder="Postal Code" required>
+                        <input type="text" id="street-address" placeholder="Street Name, House No." required>
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <label for="province">Province:</label>
+                            <select id="province" name="province">
+                                <option value="Albay">Albay</option>
+                                <option value="Batangas">Batangas</option>
+                                <option value="Camarines Sur">Camarines Sur</option>
+                                <option value="Cavite">Cavite</option>
+                                <option value="Laguna">Laguna</option>
+                            </select>
+                        </div>
+                        <div class="inputBox">
+                            <label for="city">City:</label>
+                            <select id="city" name="city">
+                                <option value="Dasmarinas City">Dasmarinas City</option>
+                                <option value="Gen. Emilio Aguinaldo">Gen. Emilio Aguinaldo</option>
+                                <option value="General Trias">General Trias</option>
+                                <option value="Imus">Imus</option>
+                                <option value="Kawit">Kawit</option>
+                                <option value="Magallanes">Magallanes</option>
+                                <option value="Maragondon">Maragondon</option>
+                                <option value="Naic">Naic</option>
+                                <option value="Rosario">Rosario</option>
+                                <option value="Tanza">Tanza</option>
+                                <option value="Ternate">Ternate</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <h3 class="title">Payment Method</h3>
+                    <div class="inputbox">
+                        <label>
+                            <input type="radio" name="payment" value="cash_on_delivery" required>
+                            Cash On Delivery
+                        </label>
+                        <label>
+                            <input type="radio" name="payment" value="gcash" required>
+                            GCash
+                        </label>
+                        <label>
+                            <input type="radio" name="payment" value="maya" required>
+                            Maya
+                        </label>
+                        <label>
+                            <input type="radio" name="payment" value="credit_card" required>
+                            Credit Card
+                        </label>
+                    </div>
+                </div>
+                <button type="submit">Proceed to Checkout</button>
+            </div>
+        </form>
+    </div>
+    <script src="transaction.js"></script>
+</body>
+</html>
